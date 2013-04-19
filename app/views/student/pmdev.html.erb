@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>PM Dev Students</title>
+        <link rel='stylesheet' href='tsl_yearbook.css' type='text/css'>
+  </head>
+
+  <body>
+    <h1>PM Dev Students</h1>
+
+    <ul>
+
+      <% @students.shuffle.each do |stud| %>
+    <li>
+      <img src = "<%= stud.photo_url %>">
+      <h3>
+        <a href = "https://twitter.com/<%= stud.twitter %>">
+          <%= stud.name %>
+        </a>
+      </h3>
+    </li>
+    <% end %>
+
+    </ul>
+  </body>
+</html>
+
